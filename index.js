@@ -4,8 +4,8 @@ const express = require('express')
 const cors = require('cors');
 const sequelize=require('./db')
 const bodyParser = require('body-parser');
-// const ErrorMiddleware=require('./middlewares/ErrorMiddleware')
-// const AuthRoute=require('./routes/AuthRoute')
+const ErrorMiddleware=require('./middlewares/ErrorMiddleware')
+const AuthRoute=require('./routes/AuthRoute')
 
 const app = express()
  
@@ -22,12 +22,12 @@ app.get('/health', (req, res) => {
     res.sendStatus(200); // Sends a 200 status code with no content
 });
 
-// app.use("/api/auth/user", AuthRoute);
+app.use("/api/auth/user", AuthRoute);
 
 
 
 
-// app.use(ErrorMiddleware);
+app.use(ErrorMiddleware);
 sequelize
     .authenticate()
     .then(() => {
