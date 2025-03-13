@@ -18,7 +18,7 @@ const verifyJWTToken = (req, res, next) => {
     // Attach user to request object
     req.user = { id: decoded.userId, role: decoded.role };
 
-    console.log("Decoded User:", req.user); // Debugging purpose
+    // console.log("Decoded User:", req.user); // Debugging purpose
 
     next(); // ✅ Move to the next middleware
   } catch (err) {

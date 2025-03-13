@@ -18,14 +18,21 @@
   "homepage": "https://github.com/Asad3601/betting-app#readme",
   "description": "",
   "dependencies": {
+    "@paypal/checkout-server-sdk": "^1.0.3",
+    "axios": "^1.8.2",
     "bcrypt": "^5.1.1",
+    "betting-app": "file:",
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",
+    "crypto": "^1.0.1",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
+    "moment": "^2.30.1",
     "mysql2": "^3.13.0",
+    "node-binance-api": "^0.13.4",
     "sequelize": "^6.37.6",
-    "sequelize-cli": "^6.6.2"
+    "sequelize-cli": "^6.6.2",
+    "tronweb": "^6.0.1"
   }
 }
