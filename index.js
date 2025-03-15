@@ -17,19 +17,15 @@ const app = express();
 
 // Using a temporary private key for testnet (DO NOT use for real funds)
 const tronWeb = new TronWeb({
-    fullHost: 'https://nile.trongrid.io', // Use Shasta: 'https://api.shasta.trongrid.io'
-    // privateKey: 'your-testnet-private-key', // Required for signing transactions (Optional for just address creation)
+  fullHost: 'https://nile.trongrid.io',
+  privateKey: "DC45265E4D76BF234B92FAEF5389B239A8963E8680A37EB41DAA34AC0713A61F", // Your private key
 });
 
-const binance = new Binance().options({
-  APIKEY: process.env.BINANCE_TESTNET_API_KEY,
-  APISECRET: process.env.BINANCE_TESTNET_SECRET,
-  useServerTime: true,
-  test: true,
-  urls: {
-    base: 'https://testnet.binance.vision/api/', // Spot Testnet base URL
-  },
-});
+// Get the associated address
+// console.log(tronWeb.address.fromPrivateKey("DC45265E4D76BF234B92FAEF5389B239A8963E8680A37EB41DAA34AC0713A61F"));
+
+
+
 
 app.use(cors({
   origin: '*',

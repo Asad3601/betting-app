@@ -10,8 +10,8 @@ const tronWeb = new TronWeb({
 const generateTestnetTrx20Address = async () => {
     try {
         const newAccount = await tronWeb.createAccount();
-        console.log("New TRC20 Testnet Address:", newAccount.address.base58);
-        console.log("Private Key:", newAccount.privateKey); // Log private key for debugging (do not expose in production)
+        // console.log("New TRC20 Testnet Address:", newAccount.address.base58);
+        // console.log("Private Key:", newAccount.privateKey); // Log private key for debugging (do not expose in production)
         
         return {
             address: newAccount.address.base58, // Generated TRC20 address
