@@ -25,10 +25,7 @@ module.exports = (sequelize) => {
           type: DataTypes.INTEGER, // Duration in days
           allowNull: false,
         },
-        earn: {
-          type: DataTypes.DECIMAL(10, 2),
-          allowNull: false,
-        },
+       
         dailyReward: {
           type: DataTypes.DECIMAL(10, 2),
           allowNull: false,

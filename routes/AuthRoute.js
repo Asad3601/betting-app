@@ -13,6 +13,7 @@ router.put("/update_password",verifyJWTToken,isUser, userController.updatePasswo
 // router.get("/create-order", userController.createOrder);
 
 router.post('/assign-plan', verifyJWTToken, userController.assignPlanToUser);
+router.get('/user-plans', verifyJWTToken, userController.getLoggedInUserPlans);
 
 
 
